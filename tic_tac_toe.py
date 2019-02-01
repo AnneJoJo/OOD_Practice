@@ -132,6 +132,10 @@ def main():
                 print("place the place you want to go x,y")
                 x = int(input())
                 y = int(input())
+                if x > 2 or y > 2 or x < 0 or y < 0:
+                    
+                    print("please enter valid position from 0 ~ 2")
+                    continue
                 if game.check_can_place(x,y):
                     break
                 else:
