@@ -23,7 +23,7 @@ class Solution:
         total_points = 0
         for r in range(len(board)):
             for c in range(len(board[0])):
-                if board[r][c].crown > 0 and board[r][c].visited == False:
+                if board[r][c].crown > 0 and not board[r][c].visited:
                     self.tmp_num_crowns = 0
                     patch_area = self.area(r,c,board,board[r][c].name)
                     total_points += self.tmp_num_crowns * patch_area
